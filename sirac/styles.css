@@ -1,0 +1,67 @@
+
+:root {
+  color-scheme: light;
+  --negro: #000000;
+  --gris: #666666;
+  --rojo: #f8c9c4;
+  --amarillo: #fcefa8;
+  --verde: #c9ecc9;
+  --azul: #c6dbf7;
+  --bloq: #eeeeee;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #ffffff; color: var(--negro); }
+body { font-family: "Times New Roman", Times, serif; font-size: 16px; }
+#app { max-width: 1000px; margin: 0 auto; padding: 20px 16px 40px; }
+
+h1 { text-align: center; font-size: 28px; margin: 0 0 4px; }
+.sub { text-align: center; margin: 0 0 20px; color: var(--gris); }
+
+/* formulario */
+.form { max-width: 360px; margin: 30px auto; border: 1px solid var(--negro); padding: 20px; display: grid; gap: 12px; }
+.form label { font-weight: bold; }
+select, button { font-family: inherit; font-size: 15px; }
+select { padding: 4px; border: 1px solid var(--negro); background: #ffffff; color: var(--negro); }
+button { padding: 6px 14px; border: 1px solid var(--negro); background: #ffffff; color: var(--negro); cursor: pointer; }
+button:hover { background: #f2f2f2; }
+button.principal { background: var(--negro); color: #ffffff; }
+button:disabled { opacity: .4; cursor: not-allowed; }
+.acciones { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin: 16px 0; }
+
+/* pestañas */
+.tabs { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid var(--negro); margin-bottom: 16px; }
+.tabs button { border-bottom: 0; }
+.tabs button.on { background: var(--negro); color: #ffffff; }
+
+/* retícula */
+.scroll { overflow-x: auto; }
+.reticula { display: grid; grid-template-columns: repeat(4, minmax(150px, 1fr)); gap: 14px 18px; min-width: 660px; }
+.num { text-align: center; font-weight: bold; font-size: 20px; }
+.celda { border: 1px solid var(--negro); display: flex; flex-direction: column; min-height: 110px; background: #ffffff; }
+.celda.vacia { background: #ffffff; }
+.cuerpo { flex: 1; text-align: center; padding: 6px; display: flex; flex-direction: column; justify-content: center; gap: 3px; }
+.nombre { font-size: 15px; line-height: 1.15; }
+.clave { font-size: 15px; }
+.estado { font-size: 12px; font-style: italic; }
+.pie { border-top: 1px solid var(--negro); text-align: center; font-size: 14px; padding: 1px 0; }
+.cuerpo select { font-size: 13px; margin-top: 4px; }
+.cuerpo label { font-size: 13px; }
+.motivo { font-size: 12px; color: #a00000; }
+
+.c-rojo { background: var(--rojo); }
+.c-amarillo { background: var(--amarillo); }
+.c-verde { background: var(--verde); }
+.c-azul { background: var(--azul); }
+.c-bloq { background: var(--bloq); color: var(--gris); }
+.c-error { outline: 2px solid #c00000; }
+
+/* leyenda y mensajes */
+.leyenda { display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: center; margin: 16px 0; font-size: 14px; }
+.leyenda span { display: inline-flex; align-items: center; gap: 6px; }
+.leyenda i { width: 16px; height: 16px; border: 1px solid var(--negro); display: inline-block; }
+.mensajes { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 6px; font-size: 15px; }
+.mensajes li { border: 1px solid var(--negro); padding: 6px 10px; }
+.mensajes li.error { background: var(--rojo); }
+.mensajes li.aviso { background: var(--amarillo); }
+.mensajes li.ok { background: var(--verde); }
+.creditos { text-align: center; font-size: 16px; margin-top: 12px; }
